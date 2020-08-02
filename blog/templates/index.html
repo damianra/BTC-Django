@@ -1,0 +1,45 @@
+{% extends "plantilla.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- ##### About Area End ##### -->
+
+    <div class="cryptos-guide-line section-padding-100 bg-img bg-overlay" style="background-image: url(img/bg-img/bg-3.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div id="plot" class="about-thumbnail mb-100">
+
+
+
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="cryptos-prices-table">
+                        {% for d in data %}
+
+                        <!-- Single Price Table -->
+                        <div class="single-price-table d-flex align-items-center justify-content-between">
+                            <div class="p-content d-flex align-items-center">
+                                <span>{{ d.market_cap_rank }}</span>
+                                <img src="{{ d.image }}" width="7%" alt="">
+                                <p>{{ d.name }} <span>{{ d.symbol }}</span></p>
+                            </div>
+                            <div class="price">
+                                <p>USD ${{ d.current_price }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
