@@ -1,0 +1,34 @@
+{% extends "plantilla.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <br>
+        <br>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Enter hash</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text text-muted">Search especific block</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <br>
+          <br>
+          <br>
+            {% for d in data %}
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Hash: {{ d.hash }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Height: {{ d.height }}</h6>
+              <p class="card-text">Header: {{ d.header }}</p>
+              <p class="card-text">Date: {{ d.adjustedTimestamp }}</p>
+              <a href="#" class="card-link">view block</a>
+            </div>
+          </div>
+        <br>
+            {% endfor %}
+    </div>
+<br>
+<br>
+{% endblock %}
