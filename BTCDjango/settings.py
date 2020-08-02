@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'BTCDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'btc_db',
-        'USER': 'aplicacionesde.c',
-        'PASSWORD': 'FH3dd6gzJ',
-        'HOST': 'vxsct39005.avnam.net',   # Or an IP Address that your database is hosted on
+        'NAME': 'database',
+        'USER': 'user',
+        'PASSWORD': '',
+        'HOST': 'xxx.xxx.xxx',   # Or an IP Address that your database is hosted on
         'PORT': '3306',
     }
 }
